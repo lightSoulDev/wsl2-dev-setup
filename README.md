@@ -354,4 +354,15 @@ export PATH="$PATH:$APPS:$GOPATH/bin:$GOROOT/bin"
 
 ### **Installing Rust**
 
-<b>`... To be continued`</b>
+1. Install the `rust` package by running the following command:
+```bash
+$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+
+2. Add `RUSTUP_HOME` and `CARGO_HOME` to your `.env` file.
+```sh
+export RUSTUP_HOME="$HOME/.rustup"
+export CARGO_HOME="$HOME/.cargo"
+
+export PATH="$PATH:$APPS:$GOPATH/bin:$GOROOT/bin:$RUSTUP_HOME/bin:$CARGO_HOME/bin"
+```
