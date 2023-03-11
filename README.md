@@ -309,6 +309,13 @@ replace_path() {
 export PS1='\[\033[0;37m\][\[\033[0;37m\]\t\[\033[0;37m\]] \[\033[0;33m\]\u\[\033[0;35m\] $(replace_path) $(git_status)\n\[\033[0;33m\]> \[\033[00m\]'
 ```
 
+> **Note**  
+> Don't forget to source the `.bashrc` file by running the following command:
+> ```bash
+> $ source ~/.bashrc
+> ```
+> Or just restart the terminal.
+
 ### **Installing Node.js**
 
 1. Install the `nvm` package by running the following command:
@@ -366,3 +373,30 @@ export CARGO_HOME="$HOME/.cargo"
 
 export PATH="$PATH:$APPS:$GOPATH/bin:$GOROOT/bin:$RUSTUP_HOME/bin:$CARGO_HOME/bin"
 ```
+
+<b>`... to be continued`</b>
+
+---
+## Configure SSH keys and remote repositories
+---
+
+### **Generating SSH keys**
+
+1. Generate a new SSH key by running the following command:
+```bash
+$ ssh-keygen -t ed25519 -C "your_email@example.com"
+```
+
+2. If you added `eval 'ssh-agent' > /dev/null 2>&1"` to your `.bashrc` file, ssh-agent will be started automatically. If not, you can start it manually by running the following command:
+```bash
+$ eval "$(ssh-agent -s)"
+```
+
+3. Add your SSH private key to the ssh-agent by running the following command:
+```bash
+$ ssh-add ~/.ssh/<private_key>
+# replace <private_key> with the name of your private key
+$ ssh-add ~/.ssh/id_ed25519
+```
+
+4. Add your SSH public key to your GitHub account by following the instructions on [GitHub Docs](https://docs.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account).
