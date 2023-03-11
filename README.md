@@ -1,10 +1,4 @@
-<head>
-  <link rel="stylesheet" href="styles.css">
-</head>
-
----
 ## Introduction
----
 ### **Why WSL?**
 
 Hello, I've been using Dualboot `PopOs + Windows 10` for my development needs for the past decade. However, constantly rebooting between the two has become tiresome, especially since I've started using photo editing software more frequently, and the Windows version of CaptureOne is superior for that.
@@ -15,9 +9,7 @@ As a result, I've decided to explore WSL2 for my development needs, especially s
 
 In this guide, you will be provided with a step-by-step process to install and enable WSL2 on your `Windows 10 or 11` system, along with instructions on setting up a Linux distribution that can be utilized for a wide range of development purposes. We will use `Ubuntu` as our WSL distro.
 
----
 ## Prerequisites
----
 Before you begin, make sure that your system meets the following requirements:
 
 - A `64-bit` version of Windows.
@@ -52,9 +44,7 @@ Or you can use this commaind:
 ```
 </details>
 
----
 ## Enabling WSL2
----
 
 <details>
 <summary><b>Method 1: Windows features</b></summary>
@@ -78,18 +68,14 @@ Or you can use this commaind:
 ```
 </details>
 
----
 ## Set Default WSL
----
 Once the feature is installed, open PowerShell as an administrator and run the command above to set WSL2 as the default version.
 
 ```powershell
 > wsl --set-default-version 2
 ```
 
----
 ## Installing a Linux Distribution
----
 > **Note**  
 > Restart your computer after installing WSL2 and setting the default version to avoid errors during Linux distribution installation.
 
@@ -130,9 +116,7 @@ Once the feature is installed, open PowerShell as an administrator and run the c
 
 </details>
 
----
 ## Setting up your Windows Tools
----
 Before we dive into the linux side of things, we need to install a few things on the Windows side of things. This will allow us to use the Linux distro as a full-fledged development environment.
 ### **Install Windows Terminal**
 
@@ -156,9 +140,7 @@ Before we dive into the linux side of things, we need to install a few things on
 3. Click on the `Reload` button to reload VS Code.
 4. Now you can use `code .` in your Ubuntu terminal to open the current directory in VS Code.
 
----
 ## Setting up your Linux Distribution
----
 Once the installation is complete, open the Start menu and search for `Ubuntu`. Click on the application to launch it.
 
 > **Note**  
@@ -379,9 +361,7 @@ export PATH="$PATH:$APPS:$GOPATH/bin:$GOROOT/bin:$RUSTUP_HOME/bin:$CARGO_HOME/bi
 
 <b>`... to be continued`</b>
 
----
 ## Configure SSH keys and remote repositories
----
 
 ### **Generating SSH keys**
 
