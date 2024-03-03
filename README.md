@@ -383,3 +383,6 @@ $ ssh-add ~/.ssh/id_ed25519
 ```
 
 4. Add your SSH public key to your GitHub account by following the instructions on [GitHub Docs](https://docs.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account).
+
+### **Signing your commits**
+Test gpg key
